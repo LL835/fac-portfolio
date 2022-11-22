@@ -1,4 +1,4 @@
-# Markup portfolio
+# Markup
 
 ## 1. Structure a site using semantic HTML to aid accessibility
 
