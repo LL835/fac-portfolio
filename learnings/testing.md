@@ -58,6 +58,21 @@ removeButtons.forEach(button => button.click())
 ```
 ## 3. Write testable, modular functions
 
+We used separate functions for adding and removing tasks and controlling local storage.
+```js
+const getTasksFromLocalStorage = (task) => {
+...
+}
+
+const addTaskItem = () => {
+...
+}
+
+const deleteTask = (e) => {
+...
+}
+```
+
 
 ## 4. Write functions that add, remove or modify DOM nodes
 
