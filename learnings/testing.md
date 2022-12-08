@@ -1,39 +1,9 @@
 # Testing
 ## 1. Check that passing a given input into our tests returns the expected output
-```js
-function equal(actual, expected, message) {
-  if (actual === expected) {
-    const defaultMessage = `Expected ${expected} and received ${actual}`;
-    console.info("Pass: " + (message || defaultMessage));
-  } else {
-    const defaultMessage = `Expected ${expected} but received ${actual} instead`;
-    console.error("Fail: " + (message || defaultMessage));
-  }
-}
 
-test("Can a user mark a task as complete?", () => {
-  // 1. Select the input element and enter a new task
-  const input = document.querySelector("#to-do");
-  input.value = "Testing if checkboxes work";
-  // 2. Submit the task
-  const submitButton = document.querySelector("#submit-btn");
-  submitButton.click();
-  // 3. Select and then click the checkbox in the new task
-  const checkbox = document.querySelector("input[type='checkbox']");
-  checkbox.click();
-  // 4. Check whether the checkbox has been ticked and assign it to the variable `actual`
-  const checkboxStatus = checkbox.checked;
-  actual = checkboxStatus;
-  // 5. Set `expected` to true
-  expected = true;
-  // 6.  Compare actual and expected
-  equal(actual, expected);
-  // 7. Reset DOM 
-  const removeButtons = document.querySelectorAll(".remove-task-btn");
-  removeButtons.forEach(button => button.click())
-});
+![Screenshot 2022-12-08 at 18 34 37](https://user-images.githubusercontent.com/104517597/206538526-58a3dcf4-b776-4de4-bb54-eb460e8552e9.png)
 
-```
+
 ## 2. Write tests to mimic the behaviour of a user performing different actions
 
 Test mimicking user adding a task to their to-do list:
@@ -137,7 +107,18 @@ const markTaskAsComplete = (e) => {
 
 ## 7. Use CSS grid to create complex layouts
 
-We did't use CSS grid for this project.
+We didn't use CSS grid for this project but I've used it in a take-home challenge.
+
+```css
+#calendar-grid {
+    display: grid;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 6px;
+}
+```
 
 ## 8. Use CSS grid to make layouts that adapt to the viewport size
 
